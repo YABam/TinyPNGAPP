@@ -1,0 +1,51 @@
+﻿<Window x:Class="TinyPNGAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TinyPNGAPP"
+        mc:Ignorable="d"
+        Title="TinyPNG 图片压缩 by yangalen_610 Build 20190419" Height="450" Width="816" Closed="Window_Closed" Initialized="Window_Initialized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name ="tbKey" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="23" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="528" Margin="0,5,0,0" Grid.Column="1" TextChanged="TbKey_TextChanged" MaxLines="1"/>
+        <Label Content="API Key" HorizontalAlignment="Left" Margin="28,3,0,0" Grid.Row="1" VerticalAlignment="Top" Width="60" Height="24"/>
+        <CheckBox Name ="cbOverlay" Content="覆盖" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="8" VerticalAlignment="Top" Height="38" Width="88"/>
+        <Label Content="操作目录" HorizontalAlignment="Left" Margin="28,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="60" Height="24"/>
+        <TextBox Name ="tbWorkPath" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="23" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="528" Grid.Column="1" MaxLines="1"/>
+        <Button Name="btnChoosePath" Content="浏览" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Grid.Column="7" Grid.Row="2" Height="22" Margin="15,0,0,0" Click="BtnChoosePath_Click"/>
+        <Button Name="btnCompress" Content="压缩！" HorizontalAlignment="Left" VerticalAlignment="Top" Width="63" Grid.Column="7" Grid.Row="8" Height="22" Margin="17,0,0,0" Click="BtnCompress_Click"/>
+        <Label Content="每个Key每月可以压缩500张" Grid.Column="7" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="171"/>
+        <ProgressBar x:Name="pbProgress" Grid.ColumnSpan="7" Grid.Column="1" HorizontalAlignment="Left" Height="23" Grid.Row="5" VerticalAlignment="Top" Width="620" Margin="0,15,0,0"/>
+        <Label x:Name="msgProgress" Content="点击压缩按钮开始压缩目录中的所有图片，包括子目录" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Grid.ColumnSpan="7" Width="630" Margin="0,10,0,0"/>
+        <TextBox x:Name ="tbNewWidth" HorizontalAlignment="Left" Height="23" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Grid.Column="7" MaxLines="1" Text="2048"/>
+        <CheckBox x:Name ="cbScale" Content="压缩大小&#xD;&#xA;只操作更大" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" Height="38" Width="88"/>
+        <Label Content="Powered by TinyPNG  https://tinypng.com/" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Top" Grid.ColumnSpan="9" Width="794" Margin="4,0,0,0"/>
+        <Label Content="获取API Key: https://tinypng.com/developers" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="8" Width="794" Margin="0,11,-73.5,0" Grid.Column="1"/>
+        <!--<CheckBox x:Name ="cbThread" Content="启用多线程" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Height="23" Width="88" Margin="0,5,0,0"/>
+        <TextBox x:Name ="tbThreadCount" HorizontalAlignment="Left" Height="23" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Grid.Column="7" MaxLines="1" Text="4"/>-->
+    </Grid>
+</Window>
